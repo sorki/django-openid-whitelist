@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+
+{% block extrastyle %}
+    <link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}whitelist_style.css" />
+{% endblock %}
+
+{% block title %}
+{% trans "OpenID Whitelisting Completed" %}
+{% endblock %}
+{% block heading %}
+{% trans "OpenID Whitelisting Completed" %}
+{% endblock %}
+
+{% block content %}
+<div id="whitelist">
+	<p>
+	{% blocktrans %}
+	Whitelisting procedure completed. OpenID whitelisted
+	sucessfuly.
+	{% endblocktrans %}
+	</p>
+	<dl>
+		<dt>{% trans "Whitelisted OpenID" %}:</dt>
+		<dd>{{ data.target }}</dd>
+		{% if data.note %}
+		<dt>{% trans "Note about whitelisted OpenID" %}:</dt>
+		<dd>{{ data.note }}</dd>
+		{% endif %}
+	</dl>
+	<p>
+	<a href="{% url whitelist-start %}">Whitelist another OpenID</a>
+	</p>
+</div>
+{% endblock %}

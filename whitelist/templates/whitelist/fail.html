@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+
+{% block extrastyle %}
+    <link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}whitelist_style.css" />
+{% endblock %}
+
+{% block title %}
+{% trans "Failure" %}
+{% endblock %}
+{% block heading %}
+{% trans "Failure" %}
+{% endblock %}
+
+{% block content %}
+<div id="whitelist">
+	<p class="fail">{{ message|escape }}</p>
+	<a href="{% url whitelist-start %}">Start again</a>
+</div>
+{% endblock %}

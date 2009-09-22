@@ -1,0 +1,17 @@
+{% for field in form %}
+<dt>{{ field.label_tag }} {% if field.field.required %}*{% endif %} </dt>
+<dd>
+{{ field }}
+{% if field.errors %}
+	{{ field.errors }}
+{% endif %}
+
+<p class="help_text">
+{% if field.field.input_formats %}
+Use following format: {{ field.field.input_formats|first }}.
+{% endif %}
+{{ field.help_text }}
+</p>
+</dd>
+
+{% endfor %}

@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+
+{% block extrastyle %}
+    <link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}whitelist_style.css" />
+{% endblock %}
+
+{% block title %}
+{% trans "OpenID Whitelist" %}
+{% endblock %}
+{% block heading %}
+{% trans "OpenID Whitelist" %}
+{% endblock %}
+
+{% block content %}
+<div id="whitelist">
+	<form action="{% url whitelist-start %}" method="post">
+		<fieldset>
+			<legend>
+				OpenID Whitelist
+			</legend>
+		<dl>
+		{% include "whitelist/form.html" %}
+		<dt></dt>
+		<dd><input type="submit" value="Whitelist" /></dd>
+		</dl>
+		</fieldset>
+	</form>
+	<div id="hints">
+		<ul>
+			<li>Google OpenID url: https://www.google.com/accounts/o8/id</li>
+		</ul>
+	</div>
+</div>
+{% endblock %}
