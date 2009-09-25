@@ -2,7 +2,7 @@ from distutils.core import setup
 import os
 
 NAME = 'django-white-openid'
-VERSION = '0.1'
+VERSION = '0.2'
 
 
 # Compile the list of packages available, because distutils doesn't have
@@ -27,14 +27,21 @@ for dirpath, dirnames, filenames in os.walk('whitelist'):
             data_files.append(os.path.join(prefix, f))
 
 
+f = open(os.path.join(os.path.dirname(__file__), 'README.txt'))
+long_description = f.read().strip()
+f.close()
+
+
 
 
 setup(name=NAME,
         version=VERSION,
         description='OpenID Whitelist application for Django',
+        long_description=long_description,
         author='Richard Marko',
         author_email='rissko@gmail.com',
         url='http://github.com/sorki/django-white-openid',
+        license='BSD',
         package_dir={'whitelist': 'whitelist'},
         packages=packages,
         package_data={'whitelist': data_files},
