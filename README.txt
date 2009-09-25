@@ -25,8 +25,7 @@ Installation
 - install python-openid
 - add 'whitelist' to your INSTALLED_APPS
 - run syncdb
-- include whitelist.urls
-(for example -  url(r'^whitelist/', include('whitelist.urls'))
+- include whitelist.urls (for example -  url(r'^whitelist/', include('whitelist.urls'))
 - form then accessible at whitelist/start
 
 Simple form style `whitelist_style.css` included in whitelist/media installation directory.
