@@ -10,10 +10,13 @@ from django.template import RequestContext
 from django.template.loader import render_to_string
 from django.utils.translation import ugettext as _
 
-from openid.consumer.consumer import (
-    Consumer, SUCCESS, CANCEL, FAILURE)
-from openid.consumer.discover import DiscoveryFailure
-from openid.extensions import sreg
+try:
+    from openid.consumer.consumer import (
+        Consumer, SUCCESS, CANCEL, FAILURE)
+    from openid.consumer.discover import DiscoveryFailure
+    from openid.extensions import sreg
+except ImportError:
+    raise ImportError('Please verify that python_openid is installed. It is required.')
 
 from forms import OpenIDWhitelistForm
 from store import DjangoOpenIDStore

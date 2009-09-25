@@ -1,9 +1,12 @@
 import base64
 import time
 
-from openid.association import Association as OIDAssociation
-from openid.store.interface import OpenIDStore
-from openid.store.nonce import SKEW
+try:
+    from openid.association import Association as OIDAssociation
+    from openid.store.interface import OpenIDStore
+    from openid.store.nonce import SKEW
+except ImportError:
+    raise ImportError('Please verify that python_openid is installed. It is required.')
 
 from models import Association, Nonce
 
