@@ -27,7 +27,7 @@ for dirpath, dirnames, filenames in os.walk('whitelist'):
             data_files.append(os.path.join(prefix, f))
 
 
-f = open(os.path.join(os.path.dirname(__file__), 'README.txt'))
+f = open(os.path.join(os.path.dirname(__file__), 'README.rst'))
 long_description = f.read().strip()
 f.close()
 
