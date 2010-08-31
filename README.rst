@@ -1,16 +1,16 @@
 OpenID whitelist 
 =================
 
-django-white-openid offers an easy way to keep your projects private.
+django-openid-whitelist offers an easy way to keep your projects private.
 
-After the installation add your OpenID to the whitelist. With this
+After installation add your OpenID to the whitelist. With this
 OpenID it is possible to add another OpenID. If not disabled,
 each whitelisted OpenID can be used to whitelist more IDs.
 
 For example - if there is OpenID A, with A it is possible to add
 OpenID B. Then with B it is possible to add another OpenID and so on.
 
-It is pretty intuitive to use this application.
+It's pretty intuitive to use this application.
 
 Requirements
 -------------
@@ -21,7 +21,7 @@ Requirements
 Installation
 -------------
 
-- install (for example easy_install django-white-openid)
+- install (for example easy_install django-openid-whitelist)
 - install python-openid
 - add 'whitelist' to your INSTALLED_APPS
 - run syncdb

@@ -1,8 +1,8 @@
 from distutils.core import setup
 import os
 
-NAME = 'django-white-openid'
-VERSION = '0.2'
+NAME = 'django-openid-whitelist'
+VERSION = '0.3'
 
 
 # Compile the list of packages available, because distutils doesn't have
@@ -40,13 +40,13 @@ setup(name=NAME,
         long_description=long_description,
         author='Richard Marko',
         author_email='rissko@gmail.com',
-        url='http://github.com/sorki/django-white-openid',
+        url='http://github.com/sorki/django-openid-whitelist',
         license='BSD',
         package_dir={'whitelist': 'whitelist'},
         packages=packages,
         package_data={'whitelist': data_files},
 
-        classifiers=['Development Status :: 4 - Beta',
+        classifiers=['Development Status :: 5 - Production/Stable',
                    'Environment :: Web Environment',
                    'Framework :: Django',
                    'Intended Audience :: Developers',
